@@ -1,0 +1,40 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#index img {
+    width: 110px !important; 
+    height: 170px !important;
+}
+
+#w-livre .d-flex p{
+    opacity: .5;
+    font-size: 14px;
+    margin: 0 !important;
+}
+
+.livre-desc h3 {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.livre-desc p {
+    font-size: 14px;
+    opacity: .7;
+}
+
+
+#w-posts h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}

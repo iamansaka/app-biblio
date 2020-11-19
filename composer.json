@@ -1,0 +1,16 @@
+{
+    "name": "anssakamahamoudou/bibliotheque",
+    "authors": [
+        {
+            "name": "Ansaka Mahamoudou",
+            "email": "anssaka.mahamoudou@icloud.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "controller/",
+            "Model\\": "model/"
+        }
+    },
+    "require": {}
+}
