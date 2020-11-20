@@ -6,15 +6,15 @@
     <p class="text-secondary mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, expedita.</p>
 
     <div class="col-12 d-flex flex-wrap p-0">
-        <?php while ($data = $livres->fetch()) : ?>
+        <?php foreach ($books as $data) : ?>
             <div id="livre" style="width: 110px;" class="mr-3">
-                <a href="books&id=<?= $data['id'] ?>">
-                    <img src="assets/images/<?= $data['images'] ?>" style="width: 110px; height: 170px;">
+                <a href="books&id=<?= $data->getId() ?>">
+                    <img src="assets/images/<?= $data->getImages() ?>" style="width: 110px; height: 170px;">
                 </a>
-                <h2 style="font-size: 12px;" class="mt-2"><?= $data['title'] ?></h2>
-                <p style="font-size: 11px; opacity: .4;"><?= $data['author'] ?></p>
+                <h2 style="font-size: 12px;" class="mt-2"><?= $data->getTitre() ?></h2>
+                <p style="font-size: 11px; opacity: .4;"><?= $data->getAuteur() ?></p>
             </div>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
     </div>
 </main>
 

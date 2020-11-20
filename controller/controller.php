@@ -12,29 +12,27 @@ class Controller
     public function __construct()
     {
         $this->booksManager = new BooksManager;
+        $this->booksManager->loadBooks();
     }
 
 
+    // public function listBooks()
+    // {
+    //     $booksManager = $this->booksManager;
+    //     $livres = $booksManager->getLivres();
 
-    /**
-     * listBooks
-     *
-     * @return string
-     */
+    //     require "views/accueil.view.php";
+    // }
+
+
     public function listBooks()
     {
-        $booksManager = $this->booksManager;
-        $livres = $booksManager->getLivres();
-
+        $books = $this->booksManager->getBook();
         require "views/accueil.view.php";
     }
 
+    
 
-    /**
-     * getBook
-     *
-     * @return string
-     */
     public function getBook()
     {
         $voirBook = $this->booksManager;
@@ -42,6 +40,8 @@ class Controller
 
         require "views/books.view.php";
     }
+
+
 
     public function postBooks()
     {
@@ -56,7 +56,6 @@ class Controller
             if ($ajoutLivres->insertLivres($titre, $auteur, $description, $pages, $images)) {
                 header('Location: accueil');
             }
-
         }
 
         require "views/posts.view.php";
